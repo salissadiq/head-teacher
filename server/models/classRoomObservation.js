@@ -31,7 +31,8 @@ const classRommObservationSchema = new mongoose.Schema({
     teacher_invite_learner_to_ask: String,
     teacher_check_achiev: String,
     teacher_home_work: String,
-    overall_assessment: String
+    comment: String,
+    overall_assessment: String,
 })
 
 const ClassRommObservation = mongoose.model('ClassRommObservation', classRommObservationSchema)

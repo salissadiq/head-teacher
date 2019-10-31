@@ -30,8 +30,9 @@ router.post('/', async (req, res) => {
             teacher_class_Observation: req.body.teacher_class_Observation,
             subject: req.body.subject,
             year_of_experience: req.body.year_of_experience,
-            Date_lesson_Observed: req.body.Date_lesson_Observed,
+            date_lesson_Observed: req.body.date_lesson_Observed,
             highest_teaching_qualification: req.body.highest_teaching_qualification,
+            other_qualificatio: req.body.other_qualificatio,
             name_of_Teacher_observed: req.body.name_of_Teacher_observed,
             trcn_Reg_number: req.body.trcn_Reg_number,
             teacher_gender: req.body.teacher_gender,
@@ -39,7 +40,7 @@ router.post('/', async (req, res) => {
             teacher_highest_qualification: req.body.teacher_highest_qualification,
             number_of_pupil_inClass: req.body.number_of_pupil_inClass,
             duration_of_lesson: req.body.duration_of_lesson,
-            age: req.body.age
+            age: req.body.age,
         }),
         classRommObservationSchema: new ClassRommObservation({
             content_is_relevant: req.body.content_is_relevant,
@@ -73,7 +74,8 @@ router.post('/', async (req, res) => {
             teacher_invite_learner_to_ask: req.body.teacher_invite_learner_to_ask,
             teacher_check_achiev: req.body.teacher_check_achiev,
             teacher_home_work: req.body.teacher_home_work,
-            overall_assessment: req.body.overall_assessment
+            comment: req.body.comment,
+            overall_assessment: req.body.overall_assessment,
         }),
         headTeacherSummary: new HeadTeacherSummary({
             two_thins_went_very_well: req.body.two_thins_went_very_well,
@@ -82,6 +84,7 @@ router.post('/', async (req, res) => {
 
         }),
         submissionSchema: new Submission({
+            name_of_teacher: req.body.name_of_teacher,
             date1: req.body.date1,
             name_of_observer: req.body.name_of_observer,
             disignation: req.body.disignation,
